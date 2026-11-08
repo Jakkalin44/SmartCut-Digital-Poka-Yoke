@@ -1,73 +1,151 @@
-# SmartCut – Digital Poka-Yoke System
+#  SmartCut — Digital Poka-Yoke System
 
-### Intelligent CNC Cutting Assistant
+### Intelligent CNC Cutting Assistant | Industrial Automation Prototype
 
-SmartCut is a low-cost software adapter designed to reduce human error in CNC cutting operations through QR Code identification and automated job data input.
+**Reducing Human Error Through QR Code Identification and Software Automation**
 
-## Project Overview
+---
 
-Traditional CNC workflows often require operators to manually enter job parameters, which can lead to incorrect inputs, wasted materials, and production delays.
+## 1. Project Overview
 
-SmartCut aims to improve this process through digital job identification and software automation.
+SmartCut is a low-cost software automation prototype designed to reduce human errors in CNC cutting operations.
 
-## Key Features
+The system uses QR Code identification to retrieve job information and automate data input through a software adapter, reducing the need for repetitive manual entry.
 
-- QR Code scanning using OpenCV
-- Job Code validation
-- Automatic job information retrieval
-- Streamlit-based user interface
-- Windows Clipboard integration
-- PyAutoGUI keyboard automation
-- Modular software architecture
+The project applies the concept of **Digital Poka-Yoke**, integrating computer vision, user interface design, and desktop automation into an accessible solution for industrial manufacturing environments.
 
-## System Workflow
+## 2. Problem Statement
 
-QR Code
-   ↓
-OpenCV QR Scanner
-   ↓
-Job Code Validation
-   ↓
-SmartCut Adapter
-   ↓
-Clipboard Integration
-   ↓
-PyAutoGUI Automation
-   ↓
-Notepad Demo
+Traditional CNC workflows often require operators to manually enter job parameters from production documents.
 
-## Technology Stack
+This process may lead to:
 
-- Python
-- Streamlit
-- OpenCV
-- NumPy
-- PyAutoGUI
-- Pyperclip
+- Incorrect job parameter entry.
+- Human errors caused by repetitive tasks.
+- Additional setup time.
+- Material waste and production delays.
 
-## Current Development Status
+## 3. Proposed Solution
 
-- [x] Job Code validation
-- [x] QR Code image scanning
-- [x] Streamlit interface
-- [x] Clipboard integration
-- [x] Notepad automation demo
-- [ ] Advanced QR scanning workflow
-- [ ] Industrial controller integration research
+SmartCut introduces a digital workflow:
 
-## Safety Notice
+1. Scan or upload a Job QR Code.
+2. Decode the QR Code using OpenCV.
+3. Validate the Job Code against stored job data.
+4. Retrieve the corresponding job information.
+5. Display verified information through a Streamlit interface.
+6. Transfer the Job Code using a software automation adapter.
 
-This project is currently an educational prototype.
+## 4. System Architecture
 
-The automation module is designed and tested for Notepad demonstration only.
+QR Code / Manual Input  
+↓  
+OpenCV QR Code Detection  
+↓  
+Job Code Validation  
+↓  
+SmartCut Adapter (Streamlit)  
+↓  
+PyAutoGUI + Pyperclip  
+↓  
+Notepad Automation Demo
 
-It is NOT connected to any CNC machine or industrial controller.
+## 5. Key Features
 
-Further safety validation and engineering development
-would be required before any industrial deployment.
+- QR Code scanning using OpenCV.
+- Manual Job Code input.
+- Job Code validation.
+- Automatic job information retrieval.
+- Streamlit-based user interface.
+- Clipboard integration.
+- Keyboard automation using PyAutoGUI.
+- Input confirmation and validation feedback.
 
-## Project Purpose
+## 6. Technology Stack
 
-Developed as an Industrial Engineering and Automation
-portfolio project to explore digital error prevention,
-process improvement, and low-cost industrial software integration.
+| Technology | Application |
+|---|---|
+| Python | Core programming language |
+| Streamlit | User interface |
+| OpenCV | QR Code detection |
+| NumPy | Image processing |
+| PyAutoGUI | Keyboard automation |
+| Pyperclip | Clipboard integration |
+| Git & GitHub | Version control |
+
+## 7. Before & After Improvement Concept
+
+**Traditional Process**
+- Manual Job Code entry.
+- Repetitive operator input.
+- Potential human input errors.
+
+**SmartCut Process**
+- QR Code identification.
+- Automatic job information retrieval.
+- Automated data transfer demonstration.
+
+*Actual time savings and error reduction have not yet been experimentally quantified.*
+
+## 8. Project Limitations & Safety
+
+This project is currently an educational software prototype.
+
+- Automation has been tested with Windows Notepad only.
+- The prototype is not connected to any CNC machine.
+- No real CNC cutting operation has been performed.
+- Industrial integration and machine-controller compatibility require further development and validation.
+
+**Safety Notice:** Do not connect the current demonstration software directly to CNC machinery.
+
+## 9. Project Team
+
+**Warakamon Pinwanna**
+- Project concept and idea development.
+- Frontend development.
+- Software testing.
+
+**Jakkarin Eiamsam-ang**
+- Software implementation.
+- Backend development.
+- Programming and automation logic.
+
+## 10. Future Development
+
+- Support additional QR Code job formats.
+- Improve job data management.
+- Develop industrial controller communication interfaces.
+- Conduct controlled performance testing.
+- Evaluate cycle time and human error reduction.
+
+## 11. Installation & Usage
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Jakkalin44/SmartCut-Digital-Poka-Yoke.git
+cd SmartCut-Digital-Poka-Yoke
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application:
+
+```bash
+streamlit run app.py
+```
+
+---
+
+### Project Information
+
+**Project:** SmartCut — Digital Poka-Yoke System  
+**Field:** Industrial Engineering & Automation  
+**Type:** Educational Software Prototype  
+**Repository:** https://github.com/Jakkalin44/SmartCut-Digital-Poka-Yoke
+
+*Developed as an educational project to explore the application of software automation in industrial manufacturing.*
