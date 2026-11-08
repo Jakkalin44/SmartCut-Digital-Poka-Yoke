@@ -1,0 +1,30 @@
+
+# Python environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# VS Code
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+!.env.example
+secrets.toml
+app backup*.py
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
